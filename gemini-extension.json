@@ -1,0 +1,14 @@
+{
+  "name": "conversiontools",
+  "version": "1.0.0",
+  "description": "Convert JSON, XML, Excel, PDF, images, videos and more (140+ file formats) directly in Gemini CLI with Conversion Tools.",
+  "author": "Conversion Tools <info@conversiontools.io>",
+  "license": "MIT",
+  "homepage": "https://conversiontools.io",
+  "mcpServers": {
+    "conversiontools": {
+      "httpUrl": "https://mcp.conversiontools.io/mcp",
+      "timeout": 120000
+    }
+  }
+}
