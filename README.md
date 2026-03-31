@@ -41,14 +41,17 @@ Convert report.pdf to Word document
 
 **140+ conversion types** including:
 
-- **Documents**: Word, PowerPoint, Excel ↔ PDF
-- **Data**: JSON, CSV, XML, YAML, Excel conversions
-- **Images**: PNG, JPG, WebP, AVIF, HEIC, SVG
-- **PDF**: Extract to Word, Excel, CSV, Text, Images
-- **Audio/Video**: MP3, WAV, MP4, MOV
-- **E-books**: EPUB, MOBI, PDF
-- **OCR**: Extract text from images and scanned PDFs
-- **AI-powered**: Smart extraction from complex documents
+- **Documents**: Word, PowerPoint, Excel, Markdown, ODS ↔ PDF, HTML, Text, LaTeX
+- **Data**: JSON, CSV, XML, YAML, Parquet, JSONL, BSON, Excel — with validators and formatters
+- **Images**: PNG, JPG, WebP, AVIF, HEIC, JXL (JPEG XL), SVG, BMP, TIFF, GIF
+- **PDF**: Extract to Word, Excel, CSV, Text, HTML, Images (JPG, PNG, SVG, TIFF), EPUB
+- **Audio**: MP3, WAV, FLAC — plus AI text-to-speech and speech-to-text
+- **Video**: MP4, MOV, MKV, AVI — plus audio extraction
+- **E-books**: EPUB, MOBI, AZW, AZW3, FB2, FBZ, PDF
+- **OCR**: Extract text from images and scanned PDFs — output as Text or searchable PDF
+- **AI-powered**: Smart extraction from complex documents, subtitle translation, TTS, STT
+- **Subtitles**: SRT, VTT, ASS — bidirectional conversions
+- **Web**: Website screenshots (URL to PDF, JPG, PNG)
 
 ## Authentication
 
