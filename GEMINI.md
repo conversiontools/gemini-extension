@@ -18,7 +18,7 @@ This opens a browser for a one-time OAuth login. After that, the tools load auto
 
 1. Pick the converter. Call `find_converter` with the input and output formats (e.g. `{ "input_format": "xml", "output_format": "csv" }`). It returns the converter type, for example `convert.xml_to_csv`. You can also pass that `converter` explicitly to `convert_file`.
 2. Provide the file content. The server is remote and cannot read local paths, so:
-   - **Files up to 5 MB:** base64-encode the file and pass it as `file_content`, along with `input_path` and `output_path`. Use a clean base64 (no PEM headers, no line wrapping). On Linux/macOS: `base64 -w0 file`. On Windows PowerShell: `[Convert]::ToBase64String([IO.File]::ReadAllBytes('file'))`. Do NOT use `certutil -encode` (it adds `-----BEGIN CERTIFICATE-----` headers that corrupt the content).
+   - **Files up to 5 MB:** read the file yourself and pass its bytes base64-encoded as `file_content`, along with `input_path` and `output_path`. Encode the file in-process rather than shelling out - agent sandboxes (Gemini CLI, for one) block PowerShell and `$(...)` base64 one-liners as "command substitution", so a shell command like `[Convert]::ToBase64String(...)` will fail. If you must shell out, use a clean encoder such as `base64 -w0 file` (no line wrapping); never `certutil -encode`, which wraps the output in `-----BEGIN CERTIFICATE-----` headers and corrupts it.
    - **Files over 5 MB:** call `request_upload_url`, PUT the file to the returned URL, then call `convert_file` with the returned `file_id` instead of `file_content`.
 3. The response includes a `download_url`. Download the result with `curl -sL "<download_url>" -o <output>`.
 
