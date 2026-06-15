@@ -1,6 +1,6 @@
 # Conversion Tools - Gemini CLI Extension
 
-[Conversion Tools](https://conversiontools.io) extension for Gemini CLI. Convert 140+ file formats directly in your terminal - no browser tabs, no copy-pasting.
+[Conversion Tools](https://conversiontools.io) extension for Gemini CLI. Convert 140+ file formats directly in your terminal - no browser tabs, no copy-pasting. Or build a custom converter from a plain-language description when no standard one fits.
 
 Part of the [Conversion Tools agent integrations](https://conversiontools.io/docs/agents) (Claude Code, Cursor, Codex, Grok, Gemini, plus the `ctio` CLI).
 
@@ -52,6 +52,11 @@ Convert report.pdf to a Word document
 | `auth_status` | Check authentication status |
 | `auth_login` | Login via OAuth |
 | `auth_logout` | Logout and clear credentials |
+| `studio_create_converter` | Build a custom converter: create it + attach the input file |
+| `studio_chat` | Describe the transformation in plain language; the converter is built |
+| `studio_run` | Run the built converter on the file |
+| `studio_run_status` | Poll the run until it finishes |
+| `studio_download_result` | Download the result |
 
 ## Supported Conversions
 
@@ -68,6 +73,7 @@ Convert report.pdf to a Word document
 - **AI-powered**: Smart extraction from complex documents, subtitle translation, TTS, STT
 - **Subtitles**: SRT, VTT, ASS - bidirectional conversions
 - **Web**: Website screenshots (URL to PDF, JPG, PNG)
+- **Custom (AI Studio)**: describe a transformation in plain language and have a reusable converter built, run, and returned - for when no standard converter fits
 
 ## Authentication
 
