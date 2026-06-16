@@ -34,6 +34,8 @@ When no existing converter fits - a custom transformation, a specific output sha
 
 Building and chatting are free; only runs are metered. The converter persists in the user's account, so a build started here continues at the web AI Studio.
 
+To **reuse** a converter you built earlier on a new file (no rebuild, same logic): `studio_list_converters` to find it -> `studio_attach_file` to attach the new file -> poll `studio_get_converter` until its status is `idle` -> `studio_run` -> `studio_run_status` -> `studio_download_result`.
+
 ## Tip: prefer the ctio CLI when available
 
 If the `ctio` CLI is installed (check with `which ctio`), it is simpler and more reliable than the MCP base64 flow - it reads local files directly and streams large files:

@@ -57,6 +57,9 @@ Convert report.pdf to a Word document
 | `studio_run` | Run the built converter on the file |
 | `studio_run_status` | Poll the run until it finishes |
 | `studio_download_result` | Download the result |
+| `studio_list_converters` | List your previously built converters (to reuse one instead of rebuilding) |
+| `studio_get_converter` | Inspect a converter's details and check it's ready to run |
+| `studio_attach_file` | Attach a new file to an existing converter and re-run its built logic |
 
 ## Supported Conversions
 
